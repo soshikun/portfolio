@@ -60,6 +60,7 @@ export const Details = styled.div`
 
     p {
         margin-top: 0;
+        margin-bottom: 16.38px;
     }
     
     button {

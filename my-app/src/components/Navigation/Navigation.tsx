@@ -56,7 +56,7 @@ const Navigation = () => {
 
     useEffect(() => {
         navigate('/');
-    }, []);
+    }, [navigate]);
 
     const onClick: MenuProps['onClick'] = (e) => {
         setCurrent(e.key);
