@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import type { MenuProps } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import { NavigationMenu } from './styles.ts';
@@ -53,10 +53,6 @@ const items: MenuProps['items'] = [
 const Navigation = () => {
     const [current, setCurrent] = useState('home');
     const navigate = useNavigate();
-
-    useEffect(() => {
-        navigate('/');
-    }, [navigate]);
 
     const onClick: MenuProps['onClick'] = (e) => {
         setCurrent(e.key);

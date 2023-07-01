@@ -9,7 +9,7 @@ import {
   RoleContainer
 } from './styles.ts';
 
-function Home() {
+function Projects() {
   const softwareProjects = [
     {
       name: 'Marine Rescue: The Sea-quel',
@@ -86,7 +86,7 @@ function Home() {
   const [details, setDetails] = useState(softwareProjects[0]); // Details of specific project
   const [projects, setProjects] = useState(softwareProjects); // Project list
   
-  const slider: any = useRef();
+  const slider = useRef();
 
   useEffect(() => {
     document.getElementById('se')?.classList.remove('selected');
@@ -125,7 +125,7 @@ function Home() {
 
   return (
     <HomeContainer>
-      <DetailsContainer ref={slider} afterChange={(e: any) => {setDetails(projects[e]);}} background={details.background} style={{height: `${details.roles.length > 3 ? '655px' : '600px'}`}}>
+      <DetailsContainer ref={slider} afterChange={(e) => {setDetails(projects[e]);}} background={details.background} style={{height: `${details.roles.length > 3 ? '655px' : '600px'}`}}>
         {createCards()}
       </DetailsContainer>
       <WordsContainer>
@@ -162,4 +162,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Projects;
